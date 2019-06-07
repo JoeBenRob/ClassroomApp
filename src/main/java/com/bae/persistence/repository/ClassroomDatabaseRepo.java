@@ -25,7 +25,6 @@ public class ClassroomDatabaseRepo implements ClassroomRepo {
 
 	@Override
 	public String CreateClasroom(String Classroom) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -43,13 +42,11 @@ public class ClassroomDatabaseRepo implements ClassroomRepo {
 
 	@Override
 	public String UpdateClassroom(String Classroom, int id) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public String DeleteClassroom(int id) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
