@@ -24,29 +24,29 @@ public class TraineeDatabaseRepo implements TraineeRepo {
 	private JSONUtil util;
 
 	@Override
-	public String CreateTrainee(String Classroom) {
+	public String createTrainee(String Classroom) {
 		return null;
 	}
 
 	@Override
-	public String GetTrainee(int id) {
+	public String getTrainee(int id) {
 		return util.getJSONForObject(manager.find(Trainee.class, id));
 	}
 
 	@Override
-	public String GetAllTrainee() {
-		Query query = manager.createQuery("Select a FROM Classroom a");
+	public String getAllTrainee() {
+		Query query = manager.createQuery("Select a FROM Trainee a");
 		Collection<Trainee> trainee = (Collection<Trainee>) query.getResultList();
 		return util.getJSONForObject(trainee);
 	}
 
 	@Override
-	public String UpdateTrainee(String Classroom, int id) {
+	public String updateTrainee(String Classroom, int id) {
 		return null;
 	}
 
 	@Override
-	public String DeleteTrainee(int id) {
+	public String deleteTrainee(int id) {
 		return null;
 	}
 

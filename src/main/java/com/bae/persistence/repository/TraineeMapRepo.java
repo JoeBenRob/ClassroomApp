@@ -18,27 +18,27 @@ public class TraineeMapRepo implements TraineeRepo {
 	private JSONUtil util;
 
 	@Override
-	public String CreateTrainee(String Classroom) {
+	public String createTrainee(String Classroom) {
 		return null;
 	}
 
 	@Override
-	public String GetTrainee(int id) {
+	public String getTrainee(int id) {
 		return traineeMap.get(id).toString();
 	}
 
 	@Override
-	public String GetAllTrainee() {
+	public String getAllTrainee() {
 		return util.getJSONForObject(traineeMap);
 	}
 
 	@Override
-	public String UpdateTrainee(String Classroom, int id) {
+	public String updateTrainee(String Classroom, int id) {
 		return null;
 	}
 
 	@Override
-	public String DeleteTrainee(int id) {
+	public String deleteTrainee(int id) {
 		return null;
 	}
 

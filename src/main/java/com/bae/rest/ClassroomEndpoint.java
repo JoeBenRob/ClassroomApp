@@ -16,13 +16,13 @@ public class ClassroomEndpoint {
 	@Path("/getClassroom/{id}")
 	@GET
 	public String getClassroom(@PathParam("id") int id) {
-		return service.GetClassroom(id);
+		return service.getClassroom(id);
 	}
 
 	@Path("/getAllClassroom")
 	@GET
 	public String getAllClassroom() {
-		return service.GetAllClassroom();
+		return service.getAllClassroom();
 	}
 
 }

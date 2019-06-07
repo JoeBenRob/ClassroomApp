@@ -2,14 +2,14 @@ package com.bae.business;
 
 public interface TraineeService {
 
-	public String CreateTrainee(String Classroom);
+	public String createTrainee(String Classroom);
 
-	public String GetTrainee(int id);
+	public String getTrainee(int id);
 
-	public String GetAllTrainee();
+	public String getAllTrainee();
 
-	public String UpdateTrainee(String Classroom, int id);
+	public String updateTrainee(String Classroom, int id);
 
-	public String DeleteTrainee(int id);
+	public String deleteTrainee(int id);
 
 }

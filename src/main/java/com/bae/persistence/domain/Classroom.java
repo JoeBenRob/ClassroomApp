@@ -10,24 +10,24 @@ public class Classroom {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int classroomId;
+	private int id;
 	private String trainer;
 
 	public Classroom() {
 	}
 
-	public Classroom(int classroomId, String trainer) {
+	public Classroom(int id, String trainer) {
 		super();
-		this.classroomId = classroomId;
+		this.id = id;
 		this.trainer = trainer;
 	}
 
 	public int getClassroomId() {
-		return classroomId;
+		return id;
 	}
 
 	public void setClassroomId(int classroomId) {
-		this.classroomId = classroomId;
+		this.id = classroomId;
 	}
 
 	public String getTrainer() {
