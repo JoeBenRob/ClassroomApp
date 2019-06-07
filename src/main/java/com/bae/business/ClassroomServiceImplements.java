@@ -10,27 +10,27 @@ public class ClassroomServiceImplements implements ClassroomService {
 	private ClassroomRepo repo;
 
 	@Override
-	public String CreateClasroom(String Classroom) {
+	public String createClasroom(String Classroom) {
 		return null;
 	}
 
 	@Override
-	public String GetClassroom(int id) {
-		return repo.GetClassroom(id);
+	public String getClassroom(int id) {
+		return repo.getClassroom(id);
 	}
 
 	@Override
-	public String GetAllClassroom() {
-		return repo.GetAllClassroom();
+	public String getAllClassroom() {
+		return repo.getAllClassroom();
 	}
 
 	@Override
-	public String UpdateClassroom(String Classroom, int id) {
+	public String updateClassroom(String Classroom, int id) {
 		return null;
 	}
 
 	@Override
-	public String DeleteClassroom(int id) {
+	public String deleteClassroom(int id) {
 		return null;
 	}
 

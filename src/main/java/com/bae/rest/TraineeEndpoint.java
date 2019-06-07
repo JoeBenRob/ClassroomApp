@@ -7,7 +7,7 @@ import javax.ws.rs.Path;
 
 import com.bae.business.TraineeService;
 
-@Path("/trainee")
+@Path("/Trainee")
 public class TraineeEndpoint {
 
 	@Inject
@@ -16,12 +16,12 @@ public class TraineeEndpoint {
 	@Path("/getTrainee/{id}")
 	@GET
 	public String getTrainee(@PathParam("id") int id) {
-		return service.GetTrainee(id);
+		return service.getTrainee(id);
 	}
 
 	@Path("/getAllTrainee")
 	@GET
 	public String getAllTrainee() {
-		return service.GetAllTrainee();
+		return service.getAllTrainee();
 	}
 }

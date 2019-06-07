@@ -24,29 +24,29 @@ public class ClassroomDatabaseRepo implements ClassroomRepo {
 	private JSONUtil util;
 
 	@Override
-	public String CreateClasroom(String Classroom) {
+	public String createClassroom(String Classroom) {
 		return null;
 	}
 
 	@Override
-	public String GetClassroom(int id) {
+	public String getClassroom(int id) {
 		return util.getJSONForObject(manager.find(Classroom.class, id));
 	}
 
 	@Override
-	public String GetAllClassroom() {
+	public String getAllClassroom() {
 		Query query = manager.createQuery("Select a FROM Classroom a");
 		Collection<Classroom> classroom = (Collection<Classroom>) query.getResultList();
 		return util.getJSONForObject(classroom);
 	}
 
 	@Override
-	public String UpdateClassroom(String Classroom, int id) {
+	public String updateClassroom(String Classroom, int id) {
 		return null;
 	}
 
 	@Override
-	public String DeleteClassroom(int id) {
+	public String deleteClassroom(int id) {
 		return null;
 	}
 

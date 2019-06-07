@@ -2,14 +2,14 @@ package com.bae.persistence.repository;
 
 public interface ClassroomRepo {
 
-	public String CreateClasroom(String Classroom);
+	public String createClassroom(String Classroom);
 
-	public String GetClassroom(int id);
+	public String getClassroom(int id);
 
-	public String GetAllClassroom();
+	public String getAllClassroom();
 
-	public String UpdateClassroom(String Classroom, int id);
+	public String updateClassroom(String Classroom, int id);
 
-	public String DeleteClassroom(int id);
+	public String deleteClassroom(int id);
 
 }

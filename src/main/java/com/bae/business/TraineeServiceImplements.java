@@ -10,27 +10,27 @@ public class TraineeServiceImplements implements TraineeService {
 	private TraineeRepo repo;
 
 	@Override
-	public String CreateTrainee(String Classroom) {
+	public String createTrainee(String Classroom) {
 		return null;
 	}
 
 	@Override
-	public String GetTrainee(int id) {
-		return repo.GetTrainee(id);
+	public String getTrainee(int id) {
+		return repo.getTrainee(id);
 	}
 
 	@Override
-	public String GetAllTrainee() {
-		return repo.GetAllTrainee();
+	public String getAllTrainee() {
+		return repo.getAllTrainee();
 	}
 
 	@Override
-	public String UpdateTrainee(String Classroom, int id) {
+	public String updateTrainee(String Classroom, int id) {
 		return null;
 	}
 
 	@Override
-	public String DeleteTrainee(int id) {
+	public String deleteTrainee(int id) {
 		return null;
 	}
 
