@@ -18,8 +18,10 @@ public class ClassroomMapRepo implements ClassroomRepo {
 	private JSONUtil util;
 
 	@Override
-	public String createClassroom(String Classroom) {
-		return null;
+	public String createClassroom(String classroom) {
+		Classroom CR = util.getObjectForJSON(classroom, Classroom.class);
+		classroomMap.put(CR.getClassroomId(), CR);
+		return "Classroom added";
 	}
 
 	@Override
@@ -33,13 +35,17 @@ public class ClassroomMapRepo implements ClassroomRepo {
 	}
 
 	@Override
-	public String updateClassroom(String Classroom, int id) {
-		return null;
+	public String updateClassroom(String classroom, int id) {
+
+		Classroom CR = util.getObjectForJSON(classroom, Classroom.class);
+		classroomMap.replace(id, CR);
+		return "Classroom updated";
 	}
 
 	@Override
 	public String deleteClassroom(int id) {
-		return null;
+		classroomMap.remove(id);
+		return "Classroom deleted";
 	}
 
 }
