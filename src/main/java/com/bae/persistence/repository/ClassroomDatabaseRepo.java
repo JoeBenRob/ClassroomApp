@@ -24,8 +24,11 @@ public class ClassroomDatabaseRepo implements ClassroomRepo {
 	private JSONUtil util;
 
 	@Override
-	public String createClassroom(String Classroom) {
-		return null;
+	public String createClassroom(String classroom) {
+		Classroom aClassroom = util.getObjectForJSON(classroom, Classroom.class);
+		manager.persist(aClassroom);
+
+		return "{\"message\": \"classroom has been sucessfully added\"}";
 	}
 
 	@Override
@@ -41,13 +44,25 @@ public class ClassroomDatabaseRepo implements ClassroomRepo {
 	}
 
 	@Override
-	public String updateClassroom(String Classroom, int id) {
-		return null;
+	public String updateClassroom(String classroom, int id) {
+		Classroom newClassroom = util.getObjectForJSON(classroom, Classroom.class);
+		Classroom oldClassroom = manager.find(Classroom.class, id);
+
+		if (oldClassroom != null) {
+			oldClassroom.setTrainer(newClassroom.getTrainer());
+		}
+		manager.persist(oldClassroom);
+		return "{\"message\": \"classroom has been sucessfully updated\"}";
 	}
 
 	@Override
 	public String deleteClassroom(int id) {
-		return null;
+		Classroom classroom = util.getObjectForJSON(getClassroom(id), Classroom.class);
+		if (manager.contains(manager.find(Classroom.class, id))) {
+			manager.remove(manager.find(Classroom.class, id));
+		}
+		;
+		return "{\"message\": \"classroom has been sucessfully deleted\"}";
 	}
 
 }

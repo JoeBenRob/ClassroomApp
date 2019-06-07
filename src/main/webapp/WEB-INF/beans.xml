@@ -5,7 +5,9 @@
       http://xmlns.jcp.org/xml/ns/javaee
       http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd" bean-discovery-mode="all">
       
-      <!-- <alternatives>
-        <class>com.qa.service.repository.AccountMapRepository</class>
+      <!-- 
+      <alternatives>
+        <class>com.bae.service.repository.TraineeMapRepo</class>
+        <class>com.bae.service.repository.ClassroomMapRepo</class>
     </alternatives> -->
 </beans>

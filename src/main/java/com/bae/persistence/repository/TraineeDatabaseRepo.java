@@ -24,8 +24,10 @@ public class TraineeDatabaseRepo implements TraineeRepo {
 	private JSONUtil util;
 
 	@Override
-	public String createTrainee(String Classroom) {
-		return null;
+	public String createTrainee(String trainee) {
+		Trainee aTrainee = util.getObjectForJSON(trainee, Trainee.class);
+		manager.persist(aTrainee);
+		return "{\"message\": \"trainee has been sucessfully added\"}";
 	}
 
 	@Override
@@ -41,13 +43,25 @@ public class TraineeDatabaseRepo implements TraineeRepo {
 	}
 
 	@Override
-	public String updateTrainee(String Classroom, int id) {
-		return null;
+	public String updateTrainee(String trainee, int id) {
+		Trainee newTrainee = util.getObjectForJSON(trainee, Trainee.class);
+		Trainee oldTrainee = manager.find(Trainee.class, id);
+
+		if (oldTrainee != null) {
+			oldTrainee.setName(newTrainee.getName());
+		}
+		manager.persist(oldTrainee);
+		return "{\"message\": \"trainee has been sucessfully updated\"}";
 	}
 
 	@Override
 	public String deleteTrainee(int id) {
-		return null;
+		Trainee trainee = util.getObjectForJSON(getTrainee(id), Trainee.class);
+		if (manager.contains(manager.find(Trainee.class, id))) {
+			manager.remove(manager.find(Trainee.class, id));
+		}
+		;
+		return "{\"message\": \"trainee has been sucessfully deleted\"}";
 	}
 
 }

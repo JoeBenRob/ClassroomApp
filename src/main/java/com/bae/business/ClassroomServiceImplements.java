@@ -10,8 +10,8 @@ public class ClassroomServiceImplements implements ClassroomService {
 	private ClassroomRepo repo;
 
 	@Override
-	public String createClasroom(String Classroom) {
-		return null;
+	public String createClasroom(String classroom) {
+		return repo.createClassroom(classroom);
 	}
 
 	@Override
@@ -25,13 +25,13 @@ public class ClassroomServiceImplements implements ClassroomService {
 	}
 
 	@Override
-	public String updateClassroom(String Classroom, int id) {
-		return null;
+	public String updateClassroom(String classroom, int id) {
+		return repo.updateClassroom(classroom, id);
 	}
 
 	@Override
 	public String deleteClassroom(int id) {
-		return null;
+		return repo.deleteClassroom(id);
 	}
 
 }

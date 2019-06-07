@@ -18,8 +18,10 @@ public class TraineeMapRepo implements TraineeRepo {
 	private JSONUtil util;
 
 	@Override
-	public String createTrainee(String Classroom) {
-		return null;
+	public String createTrainee(String trainee) {
+		Trainee TraineeO = util.getObjectForJSON(trainee, Trainee.class);
+		traineeMap.put(TraineeO.getTraineeId(), TraineeO);
+		return "Trainee added";
 	}
 
 	@Override
@@ -33,13 +35,16 @@ public class TraineeMapRepo implements TraineeRepo {
 	}
 
 	@Override
-	public String updateTrainee(String Classroom, int id) {
-		return null;
+	public String updateTrainee(String trainee, int id) {
+		Trainee TraineeO = util.getObjectForJSON(trainee, Trainee.class);
+		traineeMap.replace(id, TraineeO);
+		return "Trainee updated";
 	}
 
 	@Override
 	public String deleteTrainee(int id) {
-		return null;
+		traineeMap.remove(id);
+		return "Trainee deleted";
 	}
 
 }

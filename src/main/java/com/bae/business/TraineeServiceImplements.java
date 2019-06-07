@@ -10,8 +10,8 @@ public class TraineeServiceImplements implements TraineeService {
 	private TraineeRepo repo;
 
 	@Override
-	public String createTrainee(String Classroom) {
-		return null;
+	public String createTrainee(String trainee) {
+		return repo.createTrainee(trainee);
 	}
 
 	@Override
@@ -25,13 +25,13 @@ public class TraineeServiceImplements implements TraineeService {
 	}
 
 	@Override
-	public String updateTrainee(String Classroom, int id) {
-		return null;
+	public String updateTrainee(String trainee, int id) {
+		return repo.updateTrainee(trainee, id);
 	}
 
 	@Override
 	public String deleteTrainee(int id) {
-		return null;
+		return repo.deleteTrainee(id);
 	}
 
 }
